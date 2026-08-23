@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecOps // Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --card-bg: #161616;
+            --accent-red: #ff2a2a;
+            --dim-red: #8b0000;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --border-color: #2a2a2a;
+            --font-mono: 'Courier New', Courier, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-mono);
+            line-height: 1.6;
+            padding: 2rem;
+            background-image: 
+                linear-gradient(rgba(255, 42, 42, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 42, 42, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 2px solid var(--accent-red);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .status-badge {
+            color: var(--accent-red);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 42, 42, 0.4);
+        }
+
+        h2 {
+            color: #fff;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .prompt {
+            color: var(--accent-red);
+        }
+
+        a {
+            color: var(--accent-red);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        ul li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: var(--accent-red);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-left: 3px solid var(--accent-red);
+            padding: 1.5rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-red);
+            box-shadow: 0 0 15px rgba(255, 42, 42, 0.15);
+        }
+
+        .card h3 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <span class="status-badge"><span class="prompt">$</span> System.Status // Active</span>
+            <h1>About Me</h1>
+        </header>
+
+        <main>
+            <section id="contact-information">
+                <h2>Contact Information</h2>
+                <ul>
+                    <li><strong>Email:</strong> your.email@example.com</li>
+                    <li><strong>Phone:</strong> (123) 456-7890</li>
+                    <li><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/yourprofile</a></li>
+                    <li><strong>GitHub:</strong> <a href="#">github.com/yourusername</a></li>
+                </ul>
+            </section>
+
+            <section id="resume-experience">
+                <h2>Résumé / Experience</h2>
+                
+                <div class="grid">
+                    <div class="card" id="skills">
+                        <h3>Skills</h3>
+                        <ul>
+                            <li>Skill 1</li>
+                            <li>Skill 2</li>
+                            <li>Skill 3</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" id="certifications">
+                        <h3>Certifications</h3>
+                        <ul>
+                            <li>Certification Name – Issuing Organization (Year)</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" id="memberships">
+                        <h3>Memberships</h3>
+                        <ul>
+                            <li>Organization Name – Role/Member</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" id="work-examples">
+                        <h3>Work Examples</h3>
+                        <ul>
+                            <li><a href="#">Project Title 1</a> - Short description of project.</li>
+                            <li><a href="#">Project Title 2</a> - Short description of project.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; SecOps Portfolio // All Rights Reserved</p>
+        </footer>
+    </div>
+
+</body>
+</html>
